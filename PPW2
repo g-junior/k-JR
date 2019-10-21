@@ -1,0 +1,171 @@
+##HTML##
+
+<header id="cab">
+  <h1><span style="color:red;">P</span>et <span style="color:red;">M</span>onitor</h1>
+  <span class="ver mobile">Mobile</span>
+  <span class="ver desk">Desktop</span>
+  <nav id="menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#news">Tutor</a></li>
+      <li><a href="#contact">Pet</a></li>
+      <li><a href="#about">Rastreio</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<div id="principal">
+
+  <div id="conteudo">
+    <h2>O que é o Pet Monitor?</h2>
+    <p>Um sistema que utiliza de recusros avançados de georreferenciamento para monitoramento e localização de pets.</p>
+    <p>Para que um pet possa ser monitorado pelo sistema, basta que ele utilize um acessório especial com GPS acoplado para rastreio via satélite.</p>
+  </div>
+  <div id="lateral">
+    <h2>Como monitorar:</h2>
+    <ol>
+      <li>Cadastrar um dono;</li>
+      <li>Cadastrar um pet;</li>
+      <li>Associar um rastreador;</li>
+      <li>Colocar o rastreador no pet;</li>
+      <li>Acompanhar pelo sistema.</li>
+    </ol>
+  </div>
+</div>
+<footer id="rodape">
+  <h2>Pet Monitor</h2>
+  <p>Todos os direitos reservados.<br /><a style="color:#aaa;" href="https://www.freepik.com/free-photos-vectors/background">Background photo created by kjpargeter - www.freepik.com</a></p>
+</footer>
+
+##CSS##
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  font-family: sans-serif;
+  background-image: url(https://image.freepik.com/free-photo/abstract-techno-background-with-connecting-lines_1048-5570.jpg);
+  image-orientation: cover;
+  background-attachment: fixed;
+}
+
+#menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+#menu li {
+  float: left;
+}
+
+#menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#menu li a:hover {
+  background-color: #111;
+}
+
+#cab {
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+#rodape {
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+#cab h1 {
+  text-align: left;
+  font-size: 35px;
+}
+
+.ver {
+  font-size: 20px !important;
+  text-transform: bold;
+  color: yellow;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.mobile {
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.desk {
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+#principal {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+#principal div {
+  padding: 15px;
+  margin: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+#principal div p {
+  margin: 10px 0;
+}
+
+#principal div h2 {
+  color: red;
+}
+
+#rodape h2 {
+  color: red;
+  margin-bottom: 20px;
+}
+
+#conteudo {
+  flex: 70%;
+}
+
+#lateral {
+  flex: 30%;
+}
+
+#lateral,
+ol {
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  #principal {
+    flex-direction: column;
+  }
+
+  .mobile {
+    opacity: 1;
+    transition: opacity 2s;
+  }
+
+  .desk {
+    opacity: 0;
+    transition: opacity 2s;
+  }
+}
